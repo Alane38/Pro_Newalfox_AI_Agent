@@ -65,8 +65,8 @@ Avant de lancer le projet, vous devez télécharger les modèles suivants et les
 1. **Cloner le dépôt** :
 
    ```sh
-   git clone https://github.com/votre-utilisateur/votre-depot.git
-   cd votre-depot
+   git clone https://github.com/Alane38/Pro_Newalfox_AI_Agent.git
+   cd Pro_Newalfox_AI_Agent
    ```
 
 2. **Télécharger les modèles listés ci-dessus** et les placer dans `models/`.
@@ -80,7 +80,7 @@ Avant de lancer le projet, vous devez télécharger les modèles suivants et les
 4. **Lancer l’agent** :
 
    ```sh
-   python scripts/agent.py
+   python scripts/v4/agent.py
    ```
 
 ## Utilisation
@@ -89,7 +89,7 @@ Lancez le script principal puis posez vos questions.
 L’agent générera une réponse basée sur les documents et modèles disponibles.
 
 ```sh
-python scripts/agent.py
+python scripts/v4/agent.py
 ```
 
 ## Contribution
