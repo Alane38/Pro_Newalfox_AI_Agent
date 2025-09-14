@@ -1,0 +1,5 @@
+numpy
+sentence-transformers
+llama-cpp-python
+scikit-learn
+tqdm
