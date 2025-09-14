@@ -1,4 +1,4 @@
-# Pro NEwalfox AI Agent
+# Pro Newalfox AI Agent
 
 ## Description
 
@@ -58,7 +58,7 @@ Avant de lancer le projet, vous devez télécharger les modèles suivants et les
 
 ### Recommandations du meilleure modèle testé
 
-- `Llama-3.2-1B-Instruct-Q5_K_M.gguf` : Modèle LLaMA 3.2 1B Instruct quantisé en Q5 (plus rapide et efficace). | [Télécharger](https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q5_K_M.gguf?download=true)
+- `Llama-3.2-1B-Instruct-Q5_K_M.gguf` : Modèle LLaMA 3.2 1B Instruct quantisé en Q5 (plus rapide et efficace) | [Télécharger](https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q5_K_M.gguf?download=true)
 
 ## Installation
 
