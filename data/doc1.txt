@@ -1,0 +1,7 @@
+Logiciel X - Installation sur Windows 10 :
+
+1. Téléchargez le fichier d'installation depuis le site officiel.
+2. Double-cliquez sur le fichier .exe pour lancer l'installation.
+3. Suivez les instructions à l'écran et acceptez les termes du contrat.
+4. Une fois terminé, redémarrez votre ordinateur.
+5. Lancez le logiciel depuis le menu démarrer.

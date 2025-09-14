@@ -1,0 +1,7 @@
+Fonctionnalités principales du logiciel X :
+
+- Création de rapports PDF.
+- Exportation des données vers Excel.
+- Synchronisation automatique avec le cloud.
+- Notifications par email pour les tâches importantes.
+- Interface personnalisable pour les utilisateurs avancés.

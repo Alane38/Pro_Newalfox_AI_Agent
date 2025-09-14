@@ -1,0 +1,7 @@
+FAQ logiciel X :
+
+Q : Puis-je installer le logiciel sur Mac ?
+R : Non, le logiciel X n'est compatible qu'avec Windows 10 et 11.
+
+Q : Comment mettre à jour le logiciel ?
+R : Ouvrez le logiciel et cliquez sur "Vérifier les mises à jour" dans le menu "Aide".
