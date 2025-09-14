@@ -80,7 +80,8 @@ Avant de lancer le projet, vous devez télécharger les modèles suivants et les
 4. **Lancer l’agent** :
 
    ```sh
-   python scripts/v4/agent.py
+   cd scripts/v4/
+   python agent-v4.py
    ```
 
 ## Utilisation
@@ -89,7 +90,8 @@ Lancez le script principal puis posez vos questions.
 L’agent générera une réponse basée sur les documents et modèles disponibles.
 
 ```sh
-python scripts/v4/agent.py
+cd scripts/v4/
+python agent-v4.py
 ```
 
 ## Contribution
