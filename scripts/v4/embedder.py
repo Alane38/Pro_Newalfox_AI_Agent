@@ -16,6 +16,8 @@ def load_or_compute_embeddings(documents: List[str], model_name: str = "all-Mini
             return emb, model
         except Exception:
             pass
+    if not documents:
+        raise ValueError("The documents list is empty. Please provide a non-empty list of documents.")
     emb = model.encode(documents, convert_to_numpy=True, show_progress_bar=True)
     emb = normalize(emb)
     np.save(EMB_FILE, emb)
