@@ -44,21 +44,44 @@ Pour éviter les conflits de dépendances, il est recommandé d’utiliser un en
    pip install -r requirements.txt
    ```
 
+## Installer les outils de compilation
+
+Certains modules Python nécessitent un compilateur C++ pour être correctement installés.
+
+### Sous Windows
+
+Il faut installer **Visual Studio Build Tools** avec le composant :
+**Desktop development with C++**
+
+Ce package inclut : **MSVC compiler, CMake, Ninja et Windows SDK**.
+
+👉 Télécharge ici : [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+
+Pendant l’installation, coche :
+
+* **MSVC v143 - VS 2022 C++ x64/x86 build tools**
+* **Windows 10/11 SDK**
+
+---
+
 ## Modèles Requis
 
 Avant de lancer le projet, vous devez télécharger les modèles suivants et les placer dans le dossier `models/`.
 
-| Nom du fichier                       | Description                                 | Lien de téléchargement |
-| ------------------------------------ | ------------------------------------------- | ---------------------- |
-| `Llama-3.2-1B-Instruct-Q4_0.gguf`    | Modèle LLaMA 3.2 1B Instruct quantisé en Q4 | [Télécharger](https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_0_4_4.gguf?download=true)       |
-| `Llama-3.2-1B-Instruct-Q5_K_M.gguf`  | Variante quantisée en Q5                    | [Télécharger](https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q5_K_M.gguf?download=true)       |
-| `Llama-3.2-3B.Q5_K_M.gguf`           | Modèle LLaMA 3.2 3B quantisé Q5             | [Télécharger](https://huggingface.co/QuantFactory/Llama-3.2-3B-GGUF/resolve/main/Llama-3.2-3B.Q5_K_M.gguf?download=true)       |
-| `llama-7b.Q4_0.gguf`                 | Ancien modèle LLaMA 7B quantisé Q4          | [Télécharger](https://huggingface.co/TheBloke/LLaMA-7b-GGUF/resolve/main/llama-7b.Q4_0.gguf?download=true)       |
-| `tinyllama-1.1b-chat-v1.0.Q8_0.gguf` | TinyLLaMA 1.1B optimisé pour le chat, Q8    | [Télécharger](https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf?download=true)       |
+| Nom du fichier                       | Description                                 | Lien de téléchargement                                                                                                                     |
+| ------------------------------------ | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Llama-3.2-1B-Instruct-Q4_0.gguf`    | Modèle LLaMA 3.2 1B Instruct quantisé en Q4 | [Télécharger](https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_0_4_4.gguf?download=true)  |
+| `Llama-3.2-1B-Instruct-Q5_K_M.gguf`  | Variante quantisée en Q5                    | [Télécharger](https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q5_K_M.gguf?download=true)    |
+| `Llama-3.2-3B.Q5_K_M.gguf`           | Modèle LLaMA 3.2 3B quantisé Q5             | [Télécharger](https://huggingface.co/QuantFactory/Llama-3.2-3B-GGUF/resolve/main/Llama-3.2-3B.Q5_K_M.gguf?download=true)                   |
+| `llama-7b.Q4_0.gguf`                 | Ancien modèle LLaMA 7B quantisé Q4          | [Télécharger](https://huggingface.co/TheBloke/LLaMA-7b-GGUF/resolve/main/llama-7b.Q4_0.gguf?download=true)                                 |
+| `tinyllama-1.1b-chat-v1.0.Q8_0.gguf` | TinyLLaMA 1.1B optimisé pour le chat, Q8    | [Télécharger](https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf?download=true) |
 
-### Recommandations du meilleure modèle testé
+### Recommandation du meilleur modèle testé
 
-- `Llama-3.2-1B-Instruct-Q5_K_M.gguf` : Modèle LLaMA 3.2 1B Instruct quantisé en Q5 (plus rapide et efficace) | [Télécharger](https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q5_K_M.gguf?download=true)
+* `Llama-3.2-1B-Instruct-Q5_K_M.gguf` : Modèle LLaMA 3.2 1B Instruct quantisé en Q5 (plus rapide et efficace).
+  👉 [Télécharger](https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q5_K_M.gguf?download=true)
+
+---
 
 ## Installation
 
@@ -80,8 +103,11 @@ Avant de lancer le projet, vous devez télécharger les modèles suivants et les
 4. **Lancer l’agent** :
 
    ```sh
-   python scripts/v4/agent.py
+   cd scripts/v4/
+   python agent-v4.py
    ```
+
+---
 
 ## Utilisation
 
@@ -89,13 +115,18 @@ Lancez le script principal puis posez vos questions.
 L’agent générera une réponse basée sur les documents et modèles disponibles.
 
 ```sh
-python scripts/v4/agent.py
+cd scripts/v4/
+python agent-v4.py
 ```
+
+---
 
 ## Contribution
 
 Les contributions sont les bienvenues.
 Merci d’ouvrir une *issue* ou une *pull request* pour proposer des améliorations ou corrections.
+
+---
 
 ## Licence
 
